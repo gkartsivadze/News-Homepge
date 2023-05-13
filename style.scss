@@ -45,44 +45,38 @@ p.h5 {
     font-weight: 700
 }
 
-#menu-button {
+
+#menu-btn {
     display: none;
+    padding: 3rem;
+    background: url(./assets/images/icon-menu.svg) no-repeat;
+    background-position: center;
 }
 
-.btn {
-    border-radius: 0 !important;
+.open-menu {
+    display: flex !important;
+    flex-direction: column !important;
 }
 
-@media (max-width: 770px) {
-    #menu-button {
-        display: block;
-        border-radius: 50%;
-        padding: 1rem;
-        &:target {
-            background-color: green;
-        }
-    }
-    #menu-list {
-        text-align: right;
+@media (max-width: 767px) {
+    #menu-btn {
+        display: inline-block;
         position: fixed;
-        right: 0;
-        #sub-menu a {
-            padding-left: 3rem;
-            padding-right: 10rem;
-            padding-block: 1rem;
-        }
-        &:hover {
-            background-color: white;
-            height: 100%;
-            #sub-menu {
-                display: block;
-                div {    
-                    flex-direction: column;
-                }
-            }
-        }
+        top: 0; right: 0;
+        z-index: 5;
     }
-    #sub-menu {
-        display: none;
+    #menu-list { 
+        position: fixed;
+        align-items: start;
+        right: 0;
+        top: 0; bottom: 0;
+        padding-top: 6rem;
+        background-color: white;
+        gap: 1rem;
+        a {
+            padding-left: 2rem;
+            padding-right: 5rem;
+        }
     }
 }
+
