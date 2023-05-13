@@ -10,7 +10,7 @@ $warning: hsl(35, 77%, 62%);
 
 html {
     font-size: 15px;
-    font-family: 'Inter', sans-serif;
+    font-family: Inter, sans-serif;
 }
 
 .attribution {
@@ -20,4 +20,27 @@ html {
 
 .attribution a {
     color: hsl(228, 45%, 44%);
+}
+
+h1 {
+    font-weight: 800;
+}
+
+a.btn {
+    transition: color 0.2s;
+    &:hover {
+        color: $warning;
+    }
+}
+
+p.h5 {
+    font-weight: 800;
+    transition: color 0.2s;
+    &:hover {
+        color: $warning;
+    }
+}
+
+.h1 {
+    font-weight: 700
 }
