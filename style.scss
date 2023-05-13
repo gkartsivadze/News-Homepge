@@ -5,8 +5,8 @@ $secondary: hsl(233, 8%, 79%);
 $warning: hsl(35, 77%, 62%);
 
 
-@import "./node_modules/bootstrap/scss/bootstrap.scss";
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
 
 html {
     font-size: 15px;
@@ -43,4 +43,46 @@ p.h5 {
 
 .h1 {
     font-weight: 700
+}
+
+#menu-button {
+    display: none;
+}
+
+.btn {
+    border-radius: 0 !important;
+}
+
+@media (max-width: 770px) {
+    #menu-button {
+        display: block;
+        border-radius: 50%;
+        padding: 1rem;
+        &:target {
+            background-color: green;
+        }
+    }
+    #menu-list {
+        text-align: right;
+        position: fixed;
+        right: 0;
+        #sub-menu a {
+            padding-left: 3rem;
+            padding-right: 10rem;
+            padding-block: 1rem;
+        }
+        &:hover {
+            background-color: white;
+            height: 100%;
+            #sub-menu {
+                display: block;
+                div {    
+                    flex-direction: column;
+                }
+            }
+        }
+    }
+    #sub-menu {
+        display: none;
+    }
 }

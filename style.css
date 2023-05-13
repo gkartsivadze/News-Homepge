@@ -12060,4 +12060,46 @@ p.h5:hover {
 
 .h1 {
   font-weight: 700;
+}
+
+#menu-button {
+  display: none;
+}
+
+.btn {
+  border-radius: 0 !important;
+}
+
+@media (max-width: 770px) {
+  #menu-button {
+    display: block;
+    border-radius: 50%;
+    padding: 1rem;
+  }
+  #menu-button:target {
+    background-color: green;
+  }
+  #menu-list {
+    text-align: right;
+    position: fixed;
+    right: 0;
+  }
+  #menu-list #sub-menu a {
+    padding-left: 3rem;
+    padding-right: 10rem;
+    padding-block: 1rem;
+  }
+  #menu-list:hover {
+    background-color: white;
+    height: 100%;
+  }
+  #menu-list:hover #sub-menu {
+    display: block;
+  }
+  #menu-list:hover #sub-menu div {
+    flex-direction: column;
+  }
+  #sub-menu {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
